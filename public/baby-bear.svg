@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 640" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">A little bear among the clouds</title>
+  <desc id="desc">A cream teddy bear with a lavender bib sits on a fluffy cloud beneath pastel balloons, a crescent moon, and golden stars.</desc>
+  <defs>
+    <linearGradient id="fur" x1="288" y1="274" x2="415" y2="543" gradientUnits="userSpaceOnUse"><stop stop-color="#F0DAB6"/><stop offset="1" stop-color="#DAB98C"/></linearGradient>
+    <linearGradient id="face" x1="289" y1="272" x2="375" y2="387" gradientUnits="userSpaceOnUse"><stop stop-color="#F7E5C6"/><stop offset="1" stop-color="#E8CCA3"/></linearGradient>
+    <linearGradient id="cloud" x1="320" y1="500" x2="340" y2="624" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFEFB"/><stop offset="1" stop-color="#F2E9DF"/></linearGradient>
+    <linearGradient id="lavender" x1="250" y1="38" x2="323" y2="170" gradientUnits="userSpaceOnUse"><stop stop-color="#E5DCF0"/><stop offset="1" stop-color="#BBA5D2"/></linearGradient>
+    <linearGradient id="sage" x1="134" y1="106" x2="206" y2="209" gradientUnits="userSpaceOnUse"><stop stop-color="#DCE3CF"/><stop offset="1" stop-color="#A9BA9C"/></linearGradient>
+    <linearGradient id="peach" x1="502" y1="126" x2="552" y2="246" gradientUnits="userSpaceOnUse"><stop stop-color="#F7DCCE"/><stop offset="1" stop-color="#E7BDA7"/></linearGradient>
+    <linearGradient id="moon" x1="446" y1="38" x2="498" y2="131" gradientUnits="userSpaceOnUse"><stop stop-color="#E5C383"/><stop offset="1" stop-color="#CBA467"/></linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="175%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#846F65" flood-opacity=".10"/></filter>
+    <filter id="bear-shadow" x="-25%" y="-20%" width="150%" height="145%"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#A4825C" flood-opacity=".12"/></filter>
+  </defs>
+  <ellipse cx="343" cy="338" rx="255" ry="255" fill="#EEE4D8" opacity=".32"/>
+  <ellipse cx="352" cy="362" rx="210" ry="210" stroke="#DDCCB6" stroke-opacity=".28" stroke-dasharray="2 13" stroke-linecap="round"/>
+  <g stroke="#B7A187" stroke-width="1.8" stroke-linecap="round">
+    <path d="M174 210C169 274 236 260 225 336C219 380 263 406 297 415"/>
+    <path d="M286 170C326 254 228 281 258 341C275 376 285 390 298 414"/>
+    <path d="M526 253C546 318 477 348 476 408C475 436 453 457 424 467"/>
+  </g>
+  <g filter="url(#soft)">
+    <path d="M174 209C147 195 124 165 124 139C124 108 145 88 173 88C201 88 222 108 222 139C222 167 199 196 174 209Z" fill="url(#sage)"/>
+    <path d="M169 207L164 219L182 219L177 207" fill="#A9BA9C"/>
+    <path d="M145 117C140 124 139 134 141 140" stroke="#FFF" stroke-opacity=".52" stroke-width="6" stroke-linecap="round"/>
+    <path d="M284 172C253 156 229 123 229 92C229 56 252 32 285 32C318 32 341 56 341 92C341 123 313 160 284 172Z" fill="url(#lavender)"/>
+    <path d="M280 168L274 183L294 183L288 168" fill="#BAA4D0"/>
+    <path d="M252 69C245 78 244 90 246 100" stroke="#FFF" stroke-opacity=".56" stroke-width="7" stroke-linecap="round"/>
+    <path d="M526 251C497 237 474 207 474 178C474 146 495 124 525 124C555 124 577 146 577 178C577 210 552 239 526 251Z" fill="url(#peach)"/>
+    <path d="M522 248L516 262L536 262L530 248" fill="#DCAF96"/>
+    <path d="M496 155C489 164 489 172 490 179" stroke="#FFF" stroke-opacity=".55" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <path d="M482 40C453 40 432 61 432 87C432 113 453 133 478 133C488 133 498 130 506 124C478 126 458 107 458 83C458 65 467 50 482 40Z" fill="url(#moon)" transform="rotate(-13 468 86)"/>
+  <g fill="#BE965E">
+    <path d="M388 57L393 72L408 77L393 82L388 97L383 82L368 77L383 72Z"/>
+    <path d="M557 310L561 322L573 326L561 330L557 342L553 330L541 326L553 322Z"/>
+    <path d="M118 288L122 299L133 303L122 307L118 318L114 307L103 303L114 299Z"/>
+    <path d="M213 407L216 415L224 418L216 421L213 429L210 421L202 418L210 415Z" opacity=".7"/>
+    <path d="M404 172L407 180L415 183L407 186L404 194L401 186L393 183L401 180Z" opacity=".75"/>
+    <circle cx="352" cy="134" r="3"/><circle cx="583" cy="274" r="3"/><circle cx="100" cy="219" r="2.5"/><circle cx="172" cy="367" r="2.5"/><circle cx="450" cy="196" r="2.5"/><circle cx="584" cy="387" r="2.5" opacity=".6"/>
+  </g>
+  <g filter="url(#soft)">
+    <path d="M145 592C106 597 76 580 76 553C76 530 98 514 125 515C128 487 154 470 183 477C194 447 226 434 255 449C280 421 324 426 342 461C375 444 410 456 422 484C444 466 476 474 488 499C517 485 546 497 551 521C582 516 610 530 614 554C619 585 586 599 557 594H145Z" fill="url(#cloud)"/>
+    <path d="M119 550C123 531 142 522 159 527M187 489C194 477 212 472 225 478M450 508C463 496 479 498 486 508M548 550C564 541 580 545 588 555" stroke="#FFF" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+  </g>
+  <ellipse cx="350" cy="553" rx="129" ry="24" fill="#D9C6AB" opacity=".23"/>
+  <g filter="url(#bear-shadow)">
+    <ellipse cx="347" cy="452" rx="86" ry="108" fill="url(#fur)"/>
+    <ellipse cx="350" cy="473" rx="57" ry="71" fill="#F5E3C4"/>
+    <ellipse cx="270" cy="444" rx="32" ry="63" transform="rotate(24 270 444)" fill="url(#fur)"/>
+    <ellipse cx="425" cy="447" rx="32" ry="63" transform="rotate(-23 425 447)" fill="url(#fur)"/>
+    <path d="M245 476C253 485 264 489 275 483M419 484C431 491 441 483 448 476" stroke="#C9A373" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="267" cy="257" r="43" fill="url(#fur)"/><circle cx="267" cy="257" r="25" fill="#D3AD88"/>
+    <circle cx="429" cy="257" r="43" fill="url(#fur)"/><circle cx="429" cy="257" r="25" fill="#D3AD88"/>
+    <ellipse cx="348" cy="321" rx="109" ry="91" fill="url(#face)"/>
+    <path d="M298 250C315 241 338 240 353 243" stroke="#FFF6E4" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+    <ellipse cx="312" cy="318" rx="6.5" ry="8" fill="#6E5644"/><ellipse cx="383" cy="318" rx="6.5" ry="8" fill="#6E5644"/>
+    <circle cx="314" cy="315" r="2" fill="#FFF8E8"/><circle cx="385" cy="315" r="2" fill="#FFF8E8"/>
+    <ellipse cx="290" cy="338" rx="15" ry="9" fill="#DDAA97" opacity=".51"/><ellipse cx="405" cy="338" rx="15" ry="9" fill="#DDAA97" opacity=".51"/>
+    <ellipse cx="348" cy="352" rx="37" ry="28" fill="#FFF0D6"/>
+    <path d="M338 342C338 338 342 336 348 336C354 336 358 338 358 342C358 347 352 350 348 350C344 350 338 347 338 342Z" fill="#84634B"/>
+    <path d="M348 350V357M348 357C342 365 334 362 332 358M348 357C354 365 362 362 364 358" stroke="#84634B" stroke-width="2.3" stroke-linecap="round"/>
+    <path d="M302 398C318 412 375 413 394 398L386 448C368 467 328 467 310 448Z" fill="#CBBADB"/>
+    <path d="M310 408C330 420 366 420 385 408" stroke="#EEE4F5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M348 421L352 430L362 431L354 438L356 448L348 443L339 448L341 438L333 431L343 430Z" fill="#FFF6DD"/>
+    <ellipse cx="284" cy="528" rx="51" ry="41" transform="rotate(-14 284 528)" fill="url(#fur)"/><ellipse cx="410" cy="528" rx="51" ry="41" transform="rotate(14 410 528)" fill="url(#fur)"/>
+    <ellipse cx="282" cy="533" rx="28" ry="23" transform="rotate(-14 282 533)" fill="#F7E6CA"/><ellipse cx="412" cy="533" rx="28" ry="23" transform="rotate(14 412 533)" fill="#F7E6CA"/>
+    <path d="M274 517L271 523M285 515L284 521M401 515L402 521M413 517L416 523" stroke="#D0AD80" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <g stroke="#B0BEA4" stroke-width="2" stroke-linecap="round"><path d="M154 575C160 545 150 527 139 512M161 562C172 541 178 530 191 521"/><path d="M533 577C524 555 527 535 535 520M528 560C518 545 510 539 502 536"/></g>
+  <g fill="#CBD5BF"><ellipse cx="142" cy="525" rx="6" ry="13" transform="rotate(-38 142 525)"/><ellipse cx="157" cy="544" rx="6" ry="12" transform="rotate(18 157 544)"/><ellipse cx="177" cy="534" rx="6" ry="13" transform="rotate(43 177 534)"/><ellipse cx="533" cy="532" rx="6" ry="12" transform="rotate(23 533 532)"/><ellipse cx="515" cy="547" rx="6" ry="12" transform="rotate(-41 515 547)"/></g>
+</svg>

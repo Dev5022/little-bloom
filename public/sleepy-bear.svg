@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 240" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Sweet little dreams</title>
+  <desc id="desc">A sleepy cream teddy bear cuddles a golden crescent moon on a cloud.</desc>
+  <defs>
+    <linearGradient id="fur" x1="76" y1="83" x2="193" y2="199" gradientUnits="userSpaceOnUse"><stop stop-color="#F2DEBD"/><stop offset="1" stop-color="#DEC096"/></linearGradient>
+    <linearGradient id="cloud" x1="129" y1="171" x2="131" y2="229" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFEFA"/><stop offset="1" stop-color="#ECE2D7"/></linearGradient>
+    <linearGradient id="moon" x1="160" y1="101" x2="209" y2="194" gradientUnits="userSpaceOnUse"><stop stop-color="#E8CC91"/><stop offset="1" stop-color="#CEAA70"/></linearGradient>
+    <filter id="shadow" x="-25%" y="-30%" width="150%" height="175%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#A08767" flood-opacity=".1"/></filter>
+  </defs>
+  <circle cx="137" cy="134" r="89" fill="#EFE5D8" opacity=".38"/>
+  <g fill="#BE965E"><path d="M208 41L212 52L223 56L212 60L208 71L204 60L193 56L204 52Z"/><path d="M61 56L64 63L71 66L64 69L61 76L58 69L51 66L58 63Z" opacity=".7"/><circle cx="235" cy="102" r="2.5"/><circle cx="141" cy="34" r="2"/><circle cx="32" cy="129" r="2"/></g>
+  <g filter="url(#shadow)">
+    <path d="M52 226C29 225 20 212 25 199C29 188 42 184 54 187C58 169 78 161 94 168C104 150 130 151 143 168C161 156 184 167 188 182C208 169 228 181 231 195C250 191 265 203 258 215C252 227 239 228 225 226H52Z" fill="url(#cloud)"/>
+    <ellipse cx="126" cy="163" rx="49" ry="44" fill="url(#fur)"/>
+    <ellipse cx="97" cy="189" rx="30" ry="20" transform="rotate(-12 97 189)" fill="url(#fur)"/><ellipse cx="153" cy="192" rx="30" ry="20" transform="rotate(9 153 192)" fill="url(#fur)"/>
+    <ellipse cx="98" cy="191" rx="16" ry="12" fill="#F8E9CD"/><ellipse cx="154" cy="194" rx="16" ry="12" fill="#F8E9CD"/>
+    <g transform="rotate(-12 117 113)">
+      <circle cx="80" cy="82" r="23" fill="url(#fur)"/><circle cx="80" cy="82" r="13" fill="#D6B391"/><circle cx="159" cy="82" r="23" fill="url(#fur)"/><circle cx="159" cy="82" r="13" fill="#D6B391"/>
+      <ellipse cx="119" cy="113" rx="59" ry="48" fill="url(#fur)"/>
+      <path d="M91 108C96 115 102 114 106 108M133 108C138 115 144 114 148 108" stroke="#7E634C" stroke-width="2.5" stroke-linecap="round"/>
+      <ellipse cx="87" cy="123" rx="8" ry="5" fill="#DEAB97" opacity=".55"/><ellipse cx="153" cy="123" rx="8" ry="5" fill="#DEAB97" opacity=".55"/>
+      <ellipse cx="120" cy="130" rx="21" ry="15" fill="#FFF0D6"/>
+      <path d="M114 124C114 121 118 120 121 120C125 120 128 121 128 124C128 127 124 129 121 129C118 129 114 127 114 124Z" fill="#84634B"/>
+      <path d="M121 129V133M121 133C118 137 114 136 112 133M121 133C124 137 128 136 130 133" stroke="#84634B" stroke-width="1.7" stroke-linecap="round"/>
+    </g>
+    <path d="M102 154C115 157 133 157 144 151L141 173C130 181 110 179 100 172Z" fill="#CDBDDD"/>
+    <path d="M120 158L123 164L130 165L125 170L126 176L120 173L114 176L115 170L110 165L117 164Z" fill="#FFF5DB"/>
+    <path d="M196 107C171 107 153 126 153 150C153 174 172 194 197 194C209 194 220 190 228 182C207 185 184 172 184 151C184 133 189 117 196 107Z" fill="url(#moon)"/>
+    <ellipse cx="149" cy="163" rx="15" ry="31" transform="rotate(-45 149 163)" fill="url(#fur)"/><ellipse cx="163" cy="177" rx="14" ry="12" fill="#F1DCB9"/>
+    <path d="M166 172L171 174M164 177L169 179" stroke="#CCA77A" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

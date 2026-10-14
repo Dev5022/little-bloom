@@ -1,28 +1,40 @@
-import { env } from "cloudflare:workers";
+import "server-only";
 
-type RsvpEnvironment = { HOST_EMAIL?: string; PUBLIC_SITE_ORIGIN?: string };
+import { isSupabaseConfigured } from "./supabase/config";
+import { createClient } from "./supabase/server";
 
-function runtime() {
-  return env as typeof env & RsvpEnvironment;
-}
+export type HostUser = { id: string; email?: string };
 
 export function expectedRsvpOrigin(request: Request): string {
-  return runtime().PUBLIC_SITE_ORIGIN || new URL(request.url).origin;
+  const internal = new URL(request.url);
+  const host = request.headers.get("host");
+  // Next.js can expose an internal localhost URL. The HTTP Host preserves
+  // the visitor's authority; Vercel serves deployment requests over HTTPS.
+  if (host && host.length <= 255) {
+    try {
+      const origin = new URL(`${process.env.VERCEL === "1" ? "https:" : internal.protocol}//${host}`);
+      if (origin.host === host.toLowerCase() && !origin.username && !origin.password
+        && origin.pathname === "/" && !origin.search && !origin.hash) return origin.origin;
+    } catch { /* Fall back to the request URL for an invalid authority. */ }
+  }
+  return internal.origin;
 }
 
 export function hostIsConfigured(): boolean {
-  return Boolean(runtime().HOST_EMAIL?.trim());
+  return isSupabaseConfigured() && Boolean(process.env.HOST_EMAIL?.trim());
 }
 
-export function isAuthorizedHost(user: { userId: string; email: string } | null): boolean {
-  const email = runtime().HOST_EMAIL?.trim().toLowerCase();
-  return Boolean(email && user?.userId && user.email.trim().toLowerCase() === email);
+export function isAuthorizedHost(user: HostUser | null): boolean {
+  const email = process.env.HOST_EMAIL?.trim().toLowerCase();
+  return Boolean(email && user?.id && user.email?.trim().toLowerCase() === email);
 }
 
-export function requestHost(request: Request) {
-  const userId = request.headers.get("oai-authenticated-user-id");
-  const email = request.headers.get("oai-authenticated-user-email");
-  return userId && email ? { userId, email } : null;
+export async function getVerifiedUser(): Promise<HostUser | null> {
+  if (!isSupabaseConfigured()) return null;
+  const supabase = await createClient();
+  // Verify the session with Supabase; never trust browser identity headers.
+  const { data, error } = await supabase.auth.getUser();
+  return error ? null : data.user;
 }
 
 export const privateResponseHeaders = {

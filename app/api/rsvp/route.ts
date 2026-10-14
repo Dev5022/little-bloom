@@ -1,9 +1,9 @@
-import { eq } from "drizzle-orm";
-import { getDb } from "@/db";
-import { rsvps } from "@/db/schema";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { expectedRsvpOrigin, privateResponseHeaders } from "@/lib/rsvp-server";
 import { isAllowedOrigin, readRsvpJson, RsvpRequestError, validateRsvp } from "@/lib/rsvp-validation";
+import { RSVP_TABLE, sameRsvp, type DatabaseRsvp } from "@/lib/rsvp-store";
 
+export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
@@ -14,29 +14,25 @@ export async function POST(request: Request) {
   }
   try {
     const input = validateRsvp(await readRsvpJson(request));
-    const db = getDb();
-    const inserted = await db.insert(rsvps).values(input)
-      .onConflictDoNothing({ target: rsvps.id }).returning({ id: rsvps.id });
-
-    if (!inserted.length) {
-      const [saved] = await db.select().from(rsvps).where(eq(rsvps.id, input.id)).limit(1);
-      if (!saved) throw new Error("RSVP persistence could not be confirmed");
-      if (saved.name !== input.name || saved.attendance !== input.attendance
-          || saved.guests !== input.guests || saved.message !== input.message) {
-        return Response.json({ error: "This RSVP was already sent with different details. Refresh the invitation to send a new response." }, {
+    const supabase = createAdminClient();
+    const inserted = await supabase.from(RSVP_TABLE).insert(input).select("id").single();
+    if (inserted.error) {
+      if (inserted.error.code !== "23505") throw new Error("RSVP write failed");
+      const saved = await supabase.from(RSVP_TABLE).select("*").eq("id", input.id).single();
+      if (saved.error || !saved.data) throw new Error("RSVP persistence could not be confirmed");
+      if (!sameRsvp(saved.data as DatabaseRsvp, input)) {
+        return Response.json({ error: "This RSVP was already sent with different details." }, {
           status: 409, headers: privateResponseHeaders,
         });
       }
+      return Response.json({ ok: true, id: input.id }, { headers: privateResponseHeaders });
     }
-
-    return Response.json({ ok: true, id: input.id }, {
-      status: inserted.length ? 201 : 200, headers: privateResponseHeaders,
-    });
+    if (inserted.data?.id !== input.id) throw new Error("RSVP persistence could not be confirmed");
+    return Response.json({ ok: true, id: input.id }, { status: 201, headers: privateResponseHeaders });
   } catch (error) {
     if (error instanceof RsvpRequestError) {
       return Response.json({ error: error.message }, { status: error.status, headers: privateResponseHeaders });
     }
-    // Avoid logging submitted names and wishes when storage is unavailable.
     console.error("RSVP storage request failed");
     return Response.json({ error: "Your RSVP could not be confirmed. Please try again in a moment." }, {
       status: 503, headers: { ...privateResponseHeaders, "Retry-After": "10" },

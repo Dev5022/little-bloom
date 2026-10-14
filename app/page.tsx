@@ -1,5 +1,6 @@
 "use client";
 import Inviters from "./Inviters";
+import MusicPlayer from "./MusicPlayer";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { ArrowDown, ArrowRight, CalendarDays, Check, CheckCircle2, ChevronDown, Clock3, Heart, MapPin, Share2, Sparkles } from "lucide-react";
 
@@ -54,5 +55,6 @@ export default function Home() {
   </main><footer className="site-footer"><a className="footer-brand" href="#">Meet & Himani <span>♡</span></a><p>{t.footer}</p><div className="footer-bottom"><span>17 NOVEMBER 2026 · SURAT</span><a href="/host">{t.host}</a></div></footer>
   {toast&&<div className="toast" role="status"><CheckCircle2 size={18}/>{toast}</div>}{shareFallback&&<div className="share-dialog-backdrop"><div className="share-dialog" role="dialog" aria-modal="true" aria-label={t.share}><p>{t.copyFallback}</p><input aria-label="Invitation link" value={shareUrl} readOnly onFocus={event=>event.currentTarget.select()} autoFocus/><button className="button primary" onClick={()=>setShareFallback(false)}>{t.close}</button></div></div>}
   {conflict&&<div className="conflict-note" role="alert"><p>{language==="gu"?"આ હાજરીનો જવાબ પહેલેથી સાચવેલો છે. અલગ જવાબ મોકલવા માટે નીચે ક્લિક કરો.":"A response has already been saved. To send a separate response, choose the button below."}</p><button className="button primary" onClick={()=>{submissionId.current="";setConflict(false);setStatus("idle");try{sessionStorage.removeItem("little-bloom-draft-id");}catch{}}}>{language==="gu"?"અલગ જવાબ લખો":"Start a separate response"}</button></div>}
+  <MusicPlayer language={language} />
  </>;
 }

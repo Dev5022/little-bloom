@@ -22,4 +22,16 @@ html[lang=en] .ceremony-title{font-size:42px;line-height:1.2}
 .umiya-mataji{mask-image:url('/umiya-mataji.png');-webkit-mask-image:url('/umiya-mataji.png')}
 .veer-maharaj{mask-image:url('/veer-maharaj.png');-webkit-mask-image:url('/veer-maharaj.png')}
 .hero{padding-top:12px}
-@media(max-width:760px){.invocation{padding-top:14px;padding-bottom:10px;gap:8px}.invocation .ganesha,.invocation .deity-image{width:40px;height:44px}.invocation-center{gap:8px}.invocation-mantra{font-size:9px}.ceremony-title{font-size:27px}html[lang=en] .ceremony-title{font-size:34px}.hero{padding-top:12px}}
+.parent-names.invitation-message{max-width:100%;line-height:1.5}
+.invitation-message>span{display:block;font:inherit;color:inherit}
+.dev-message{margin-top:18px}
+:root{--statement-size:clamp(38px,3.6vw,58px)}
+html[lang=en]{--statement-size:clamp(48px,4.9vw,74px)}
+h1,html[lang=en] h1,.parent-names.invitation-message{font-size:var(--statement-size)}
+.hero-intro,.story-text,.story-end,.details-note,.rsvp-copy>p:not(.eyebrow),.address,.event-time{font-size:16px}
+.dev-message strong{font-weight:700}
+.ceremony-title,html[lang=en] .ceremony-title{font-size:48px}
+@media(max-width:1050px){html[lang=gu]{--statement-size:40px}}
+@media(max-width:760px){html[lang=gu]{--statement-size:38px}html[lang=en]{--statement-size:55px}}
+@media(max-width:370px){html[lang=gu]{--statement-size:33px}html[lang=en]{--statement-size:48px}}
+@media(max-width:760px){.ceremony-title,html[lang=en] .ceremony-title{font-size:43px}.invocation{padding-top:14px;padding-bottom:10px;gap:8px}.invocation .ganesha,.invocation .deity-image{width:40px;height:44px}.invocation-center{gap:8px}.invocation-mantra{font-size:9px}.hero{padding-top:12px}}

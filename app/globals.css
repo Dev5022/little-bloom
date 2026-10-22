@@ -33,6 +33,10 @@ html[lang=en]{--statement-size:clamp(48px,4.9vw,74px)}
 h1,html[lang=en] h1,.parent-names.invitation-message{font-size:var(--statement-size)}
 .hero-intro,.story-text,.story-end,.details-note,.rsvp-copy>p:not(.eyebrow),.address,.event-time{font-size:16px}
 .dev-message strong{font-weight:700}
+.hero-meta{font-size:16px;line-height:1.8}
+.hero-meta svg{width:19px;height:19px}
+.hero-footnote{font-size:15px;line-height:1.9}
+.event-label{font-size:16px;font-weight:600;line-height:1.8}
 .ceremony-title,html[lang=en] .ceremony-title{font-size:48px}
 @media(max-width:1050px){html[lang=gu]{--statement-size:40px}}
 @media(max-width:760px){html[lang=gu]{--statement-size:38px}html[lang=en]{--statement-size:55px}}

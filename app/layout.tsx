@@ -3,11 +3,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000")),
-  title: "Meet & Himani · શ્રીમંત સંસ્કાર · A Little Bloom",
-  description: "મીત અને હિમાનીના શ્રીમંત સંસ્કારનું સ્નેહભર્યું આમંત્રણ. ૧૭ નવેમ્બર ૨૦૨૬, સવારે ૧૦ વાગ્યે — Concord Restaurant & Banquet, Surat. Join the celebration and send your RSVP.",
+  title: "Meet & Himani · સીમંત સંસ્કાર · A Little Bloom",
+  description: "મીત અને હિમાનીના સીમંત સંસ્કારનું સ્નેહભર્યું આમંત્રણ. ૧૭ નવેમ્બર ૨૦૨૬, સવારે ૯:૩૦ વાગ્યે — Concord Restaurant & Banquet, Surat. Join the celebration and send your RSVP.",
   openGraph: {
     title: "Meet & Himani – Baby Shower – 17 November 2026",
-    description: "Tiny little feet, a whole lot of love. Join us on 17 November 2026, 10 AM IST, at Concord Restaurant & Banquet, Surat.",
+    description: "Tiny little feet, a whole lot of love. Join us on 17 November 2026, 9:30 AM, at Concord Restaurant & Banquet, Surat.",
     type: "website",
     url: "/",
     siteName: "A Little Bloom",

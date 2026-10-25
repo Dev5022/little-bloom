@@ -4,10 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000")),
   title: "Meet & Himani · સીમંત સંસ્કાર · A Little Bloom",
-  description: "મીત અને હિમાનીના સીમંત સંસ્કારનું સ્નેહભર્યું આમંત્રણ. ૧૭ નવેમ્બર ૨૦૨૬, સવારે ૯:૩૦ વાગ્યે — Concord Restaurant & Banquet, Surat. Join the celebration and send your RSVP.",
+  description: "મીત અને હિમાનીના સીમંત સંસ્કારનું સ્નેહભર્યું આમંત્રણ. ૧૭ નવેમ્બર ૨૦૨૬, સવારે ૯:૩૦ વાગ્યે — શ્રી બ્રહ્માણી માતાજીનું મંદિર, કામલી, ઊંઝા. Join the celebration and send your RSVP.",
   openGraph: {
     title: "Meet & Himani – Baby Shower – 17 November 2026",
-    description: "Tiny little feet, a whole lot of love. Join us on 17 November 2026, 9:30 AM, at Concord Restaurant & Banquet, Surat.",
+    description: "Tiny little feet, a whole lot of love. Join us on 17 November 2026, 9:30 AM, at Shri Brahmani Mataji Temple, Kamli, Unjha.",
     type: "website",
     url: "/",
     siteName: "A Little Bloom",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Meet & Himani – Baby Shower – 17 November 2026",
-    description: "Celebrate with us on 17 November 2026 at Concord Restaurant & Banquet, Surat.",
+    description: "Celebrate with us on 17 November 2026 at Shri Brahmani Mataji Temple, Kamli, Unjha.",
     images: ["/baby-shower-preview.jpg"],
   },
   icons: {

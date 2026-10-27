@@ -1,6 +1,6 @@
 export default function Inviters({ language }: { language: "gu" | "en" }) {
   const names = language === "gu"
-    ? ["આશાબેન વસંતભાઈ પટેલ", "વસંતભાઈ શાંતિલાલ પટેલ"]
+    ? ["ગં.સ્વ. આશાબેન વસંતભાઈ પટેલ", "સ્વ. વસંતભાઈ શાંતિલાલ પટેલ"]
     : ["Ashaben Vasantbhai Patel", "Vasantbhai Shantilal Patel"];
 
   return (
